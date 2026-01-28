@@ -1,0 +1,10 @@
+# Credenciais e Segredos
+.env
+
+# Dados do n8n (Volume do Docker)
+n8n_data/
+node_modules/
+
+# Logs e arquivos temporários
+*.log
+.DS_Store
