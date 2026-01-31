@@ -1,5 +1,5 @@
 {
-  "name": "Curadoria de notícias",
+  "name": "Curadoria de notícias de Tecnologia",
   "nodes": [
     {
       "parameters": {
@@ -156,6 +156,28 @@
       ],
       "id": "64af3ca1-04c2-4fb0-a395-fa71566daf29",
       "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "chatId": "5556538619",
+        "text": "={{ $json.content.parts[0].text }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        752,
+        -112
+      ],
+      "id": "c61eadfa-9f10-485b-8553-a34330b10975",
+      "name": "Send a text message",
+      "webhookId": "673ee23a-2822-4b08-beb8-eadc464e1a52",
+      "credentials": {
+        "telegramApi": {
+          "id": "t0YKevSdsMuqYzht",
+          "name": "Telegram account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -244,7 +266,13 @@
     },
     "Message a model": {
       "main": [
-        []
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "HTTP Request": {
@@ -264,7 +292,7 @@
     "executionOrder": "v1",
     "availableInMCP": false
   },
-  "versionId": "77143023-38bb-4f62-be98-b74198d235ac",
+  "versionId": "5d4d0b44-0680-4abe-adf7-fe7054d9290a",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "1645471bd76d5a248d279058fb8c1425136988dbde6a9d045f5fe5e346552901"
